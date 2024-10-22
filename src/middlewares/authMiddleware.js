@@ -1,6 +1,11 @@
 import jwt from 'jsonwebtoken';
 const authMiddleware = async (req,res,next) =>{
-    const token = req?.cookies?.token??null;
+    const authHeader = req.headers.authorization;
+
+  // Check if the Authorization header is present and follows the Bearer scheme
+    if (authHeader && authHeader.startsWith('Bearer ')) {
+    const token = authHeader.split(' ')[1]; // Extract the token part
+    }
     let verifiedToken;
     try {
         if(token){
