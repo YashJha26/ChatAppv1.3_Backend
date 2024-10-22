@@ -5,8 +5,8 @@ const authMiddleware = async (req,res,next) =>{
   // Check if the Authorization header is present and follows the Bearer scheme
     if (authHeader && authHeader.startsWith('Bearer ')) {
     const token = authHeader.split(' ')[1]; // Extract the token part
-    }
     console.log("Middleware token",token);
+    }
     let verifiedToken;
     try {
         if(token){
