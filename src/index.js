@@ -13,7 +13,7 @@ import imageKitAuthController from './controllers/imageKitAuthController.js';
 import ioMiddleware from './middlewares/ioMiddleware.js';
 
 dotenv.config();
-const allowedOrigins = ['http://localhost:5173'];
+const allowedOrigins = ['http://localhost:5173','https://chatappv13frontend6721.netlify.app',process.env.BASE_URL];
 app.use(cors({
     origin: allowedOrigins,
     credentials: true,
