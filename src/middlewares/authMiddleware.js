@@ -6,6 +6,7 @@ const authMiddleware = async (req,res,next) =>{
     if (authHeader && authHeader.startsWith('Bearer ')) {
     const token = authHeader.split(' ')[1]; // Extract the token part
     }
+    console.log("Middleware token",token);
     let verifiedToken;
     try {
         if(token){
